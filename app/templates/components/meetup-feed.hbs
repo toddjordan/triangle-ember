@@ -1,0 +1,11 @@
+
+<ul>
+  {{#each events as |item|}}
+    <li>{{item.title}}</li>
+    <li>location: {{item.location}}</li>
+    <li>{{item.description}}</li>
+    
+  {{/each}}
+</ul>
+
+{{yield}}
