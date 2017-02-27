@@ -7,6 +7,6 @@ export default Ember.Route.extend({
       title: 'Ember Hack Night',
       location: 'Iron Yard, Durham, in the basement',
       description: 'come hack with us'
-    }]
+    }];
   }
 });
