@@ -1,24 +1,25 @@
----
 language: node_js
 node_js:
-  - "6"
-
+- '6'
 sudo: false
-
 cache:
   directories:
-    - $HOME/.npm
-    - $HOME/.cache # includes bowers cache
-
+  - "$HOME/.npm"
+  - "$HOME/.cache"
 before_install:
-  - npm config set spin false
-  - npm install -g bower phantomjs-prebuilt
-  - bower --version
-  - phantomjs --version
-
+- npm config set spin false
+- npm install -g bower phantomjs-prebuilt
+- bower --version
+- phantomjs --version
 install:
-  - npm install
-  - bower install
-
+- npm install
+- bower install
 script:
-  - npm test
+- npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: BVwprPvzbsznNQ45cVTtOZbTrXxHcvwqEy2OeCGqc7bWADanFXde+9koeOqeKy+hnDAEdcFrhJq2Q5chsSWibpCGoiMlv7jzduMYvQqefyzllfgKdCQsCFxxcG/Ds7xbsXGFJCBBsQvT5xb9ZQwdqZPAN1AMm71mrcV6oexW6GPcPxLcgrWJyoU5/1qrLp5gfwBi45bJ9EG3JTG24+VosSXdUWPhNbP7hBCKzHWyxjEsvQMwvnu43KeFzwNdtxjEHdqWquz13bVuAIizyBitLBnAEwVCQvatVnaM7PpqfCbdA604W+z8ZgiD074dxff3cTLJOAL8qJ/w68Aov6LyfY65Rb50fBtCXfgQgMoPsJhEMN3FjG56hfptpYuLmvwnehXk6vF6yk6Z/lRcBBDpPIXxh0YTWp5/SJWJ0vdeKGwaphML9WIl/1kxim0rcNu/cabpBM+uiCrJtjPh2ykMjJ9VNY+2CfsYaiTc3iHpN3Bxi96HP62hspVMwoKMdBbNKkf5TjUjHKylaN5DRgqJP3CmGRLVyqt2BoRFmdP+jcURSh0AUVz4zgpLo1YeQoMCRtugoJCdojYfgtVNCygCQgGWkMQe9XLklYjGfJQcQsh9yKGRkHFE62yZW+UbH94FYFmf+ScZta6IUgDuBsvvgFT0/1VBlaqPuRetUUlv76s=
+  app: triangle-ember
+  on:
+    repo: toddjordan/triangle-ember
