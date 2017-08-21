@@ -3,7 +3,7 @@
   {{#each events as |item|}}
     <li>{{item.name}}</li>
     <li>location: {{item.venue.name}}</li>
-    <li>{{item.description}}</li>
+    <li>{{safe-string item.description}}</li>
     <li>{{item.link}}</li>
   {{/each}}
 </ul>
