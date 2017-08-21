@@ -1,5 +1,13 @@
-<h1>Triangle Ember</h1>
-<p>A open source community of ambitious Emberitos and Emberitas from Raleigh, Durham, Chapel Hill, and surrounding communities</p>
+<article>
+  <header>
+    <img class="meetup-logo" src="/images/raleigh-tomster.png">
+    <h1>Triangle Ember</h1>
+  </header>
+  <section>
+    <p>A open source community of ambitious Emberitos and Emberitas from Raleigh, Durham, Chapel Hill, and surrounding communities</p>
+  </section>
+  <section>
+    {{meetup-feed events=model}}
+  </section>
+</article>
 
-{{meetup-feed events=model}}
-{{outlet}}

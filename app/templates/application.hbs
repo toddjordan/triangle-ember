@@ -5,6 +5,12 @@
   <li>{{#link-to "projects"}}Projects{{/link-to}}</li>
   <li>{{#link-to "jobs"}}Jobs{{/link-to}}</li>
 </ul>
-{{outlet}}
-<i>Built with Ember, with Fastboot, on Heroku!</i>
+<article>
+  <section>
+    {{outlet}}
+  </section>
+  <footer>
+    <i>Built with Ember, with Fastboot, on Heroku!</i>
+  </footer>
+</article>
 
