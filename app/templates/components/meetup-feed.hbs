@@ -1,10 +1,10 @@
 
 <ul>
   {{#each events as |item|}}
-    <li>{{item.title}}</li>
-    <li>location: {{item.location}}</li>
+    <li>{{item.name}}</li>
+    <li>location: {{item.venue.name}}</li>
     <li>{{item.description}}</li>
-    
+    <li>{{item.link}}</li>
   {{/each}}
 </ul>
 

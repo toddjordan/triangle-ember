@@ -47,5 +47,11 @@ module.exports = function(environment) {
 
   }
 
+  ENV.contentSecurityPolicy = {
+    'connect-src': "'self' https://api.meetup.com"
+  }
+
+  ENV.MEETUP_KEY = process.env.MEETUP_KEY;
+
   return ENV;
 };
