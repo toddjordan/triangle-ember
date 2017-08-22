@@ -4,6 +4,17 @@ export default DS.Model.extend({
   name: DS.attr(),
   link: DS.attr(),
   description: DS.attr(),
-  venue: DS.attr()
+  venue: DS.attr(),
+  time: DS.attr('date')
 
 });
+
+
+
+
+
+
+
+
+
+
